@@ -20,6 +20,21 @@ class RackO:
         self.hands = [[] for i in range(self.num_players)]
         self.discard = []
 
+    def draw_card(self):
+        pass
+
+    def discard(self):
+        pass
+
+    def check_discard(self):
+        pass
+
+    def draw_discard(self):
+        pass
+
+    def game_over(self):
+        pass
+
 
 if __name__ == '__main__':
     rack_o = RackO(deck_size=10, hand_size=3)
