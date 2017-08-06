@@ -1,0 +1,19 @@
+import random
+
+
+class RackO:
+
+    def __init__(self, deck_size=50, hand_size=10, hands_up=False, deck_seq=None):
+        self.deck_size = deck_size
+        self.hand_size = hand_size
+        self.hands_up = hands_up
+        if deck_seq:
+            self.deck_seq = deck_seq
+        else:
+            self.deck_seq = range(1, deck_size + 1)
+            random.shuffle(self.deck_seq)
+
+
+if __name__ == '__main__':
+    rack_o = RackO(deck_size=10, hand_size=3)
+    print rack_o.deck_seq
