@@ -22,6 +22,7 @@ class RackO:
 
         #start the game
         self.deal_hands()
+        self.discard.append(self.deck.pop())
 
     def deal_hands(self):
         for i in range(self.num_players):
@@ -43,8 +44,12 @@ class RackO:
     def game_over(self):
         pass
 
+    def print_state(self):
+        print self.deck
+        print self.discard
+        print self.hands
+
 
 if __name__ == '__main__':
     rack_o = RackO(deck_size=10, hand_size=3)
-    print rack_o.deck
-    print rack_o.hands
+    rack_o.print_state()
