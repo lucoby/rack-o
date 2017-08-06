@@ -3,13 +3,13 @@ import random
 
 class RackO:
 
-    def __init__(self, deck_size=50, hand_size=10, hands_up=False, deck_seq=None):
+    def __init__(self, deck_size=50, hand_size=10, hands_up=False, deck=None):
         # parameters from input
         self.deck_size = deck_size
         self.hand_size = hand_size
         self.hands_up = hands_up
-        if deck_seq:
-            self.deck = deck_seq
+        if deck:
+            self.deck = deck
         else:
             self.deck = range(1, deck_size + 1)
             random.shuffle(self.deck)
@@ -29,19 +29,22 @@ class RackO:
             for j in range(self.hand_size):
                 self.hands[i].append(self.deck.pop())
 
-    def draw_card(self):
-        pass
+    def check_deck(self):
+        return self.deck[-1]
 
-    def discard(self):
+    def draw_from_deck(self):
         pass
 
     def check_discard(self):
         pass
 
-    def draw_discard(self):
+    def draw_from_discard(self):
         pass
 
     def game_over(self):
+        pass
+
+    def game_loop(self):
         pass
 
     def print_state(self):
@@ -51,5 +54,6 @@ class RackO:
 
 
 if __name__ == '__main__':
-    rack_o = RackO(deck_size=10, hand_size=3)
+    rack_o = RackO(deck_size=10, hand_size=3, deck=[3,1,9,6,4,7,2,10,8,5])
     rack_o.print_state()
+    print rack_o.check_deck()
