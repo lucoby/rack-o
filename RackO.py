@@ -20,7 +20,7 @@ class RackO:
         self.hands = [[] for i in range(self.num_players)]
         self.discard = []
 
-        #start the game
+        # start the game
         self.deal_hands()
         self.discard.append(self.deck.pop())
 
@@ -61,6 +61,6 @@ class RackO:
 
 
 if __name__ == '__main__':
-    rack_o = RackO(deck_size=10, hand_size=3, deck=[3,1,9,6,4,7,2,10,8,5])
+    rack_o = RackO(deck_size=10, hand_size=3, deck=[3, 1, 9, 6, 4, 7, 2, 10, 8, 5])
     rack_o.print_state()
     print rack_o.check_deck()
