@@ -1,6 +1,7 @@
 import unittest
 from RackO import RackO
 
+
 class TestRackO(unittest.TestCase):
 
     def test_rack_o(self):
