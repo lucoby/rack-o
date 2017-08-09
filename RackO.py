@@ -1,6 +1,5 @@
 import random
 
-
 class RackO:
 
     def __init__(self, deck_size=50, hand_size=10, hands_up=False, deck=None):
@@ -55,12 +54,12 @@ class RackO:
         pass
 
     def print_state(self):
-        print self.deck
-        print self.discard
-        print self.hands
+        print(self.deck)
+        print(self.discard)
+        print(self.hands)
 
 
 if __name__ == '__main__':
     rack_o = RackO(deck_size=10, hand_size=3, deck=[3, 1, 9, 6, 4, 7, 2, 10, 8, 5])
-    rack_o.print_state()
-    print rack_o.check_deck()
+    # rack_o.print_state()
+    # print rack_o.check_deck()
